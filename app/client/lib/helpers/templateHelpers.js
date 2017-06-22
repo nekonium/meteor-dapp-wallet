@@ -42,7 +42,7 @@ Template.registerHelper('isMistMode', function(){
 });
 
 /**
-Check if currenct unit is an nuko unit
+Check if currenct unit is an ether unit
 
 @method (isEtherUnit)
 **/
@@ -192,7 +192,7 @@ Template.registerHelper('formatTime', Helpers.formatTime);
 /**
 Formats a given transactions balance
 
-    {{formatTransactionBalance value exchangeRates "nekonium"}}
+    {{formatTransactionBalance value exchangeRates "ether"}}
 
 @method formatTransactionBalance
 @param {String} value  the value to format
