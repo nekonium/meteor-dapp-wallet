@@ -1,6 +1,6 @@
 # Ethereum Wallet Ðapp
 
-The Ethereum wallet.
+The Nekonium wallet.
 
 **NOTE** The wallet is not yet official released,
 can contain severe bugs!
@@ -8,7 +8,7 @@ can contain severe bugs!
 
 ## Development
 
-Start an `geth` node and and the app using meteor and open http://localhost:3000 in your browser:
+Start an `gnekonium` node and and the app using meteor and open http://localhost:3000 in your browser:
 
     $ geth --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
 
