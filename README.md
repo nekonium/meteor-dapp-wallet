@@ -1,4 +1,4 @@
-# Ethereum Wallet Ðapp
+# Nekonium Wallet Ðapp
 
 The Nekonium wallet.
 
@@ -10,7 +10,7 @@ can contain severe bugs!
 
 Start an `gnekonium` node and and the app using meteor and open http://localhost:3000 in your browser:
 
-    $ geth --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
+    $ gnekonium --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
 
 Starting the wallet dapp using [Meteor](https://meteor.com/install)
 
