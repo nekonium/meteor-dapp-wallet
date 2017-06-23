@@ -30,14 +30,14 @@
                 "blockReceived": "新ブロック受信",
                 "timeSinceBlock": "最後のブロックを受信してから",
                 "peers": "ピアーズ",
-                "testnetExplain": "これはテストネットです。これらのアドレスにetherを絶対に送らないでください。",
+                "testnetExplain": "これはテストネットです。これらのアドレスにNekoniumを絶対に送らないでください。",
                 "noAccounts": {
                     "title": "アカウント未登録",
                     "text": "パスワード付きのアカウントを作成してください。"
                 }
             },
             "error": {
-                "wrongChain": "間違ったチェーン上にいます。Ethereum Wallet App を再起動して下さい。"
+                "wrongChain": "間違ったチェーン上にいます。Nekonium Wallet App を再起動して下さい。"
             },
             "warnings": {
                 "txOriginVulnerabilityWallet": "このスマート契約財布は、古いコードを持っており、フィッシング攻撃の対象となります。",
@@ -52,7 +52,7 @@
                 "title": "アカウントを選択"
             },
             "testnetWallet": {
-                "walletNeedsDeployment": "テストネット上にいます。<br><br>オリジナルウォレットの契約コードが見つかりません、ウォレットコントラクトのスタブコントラクトが使用可能なものをあなたのアドレスから作らなければなりません。: <br><br><small><code>__account__</code></small><br><br><em>最低でも1ether以上アドレスに入っていなければなりません！</em>",
+                "walletNeedsDeployment": "テストネット上にいます。<br><br>オリジナルウォレットの契約コードが見つかりません、ウォレットコントラクトのスタブコントラクトが使用可能なものをあなたのアドレスから作らなければなりません。: <br><br><small><code>__account__</code></small><br><br><em>最低でも1NUKO以上アドレスに入っていなければなりません！</em>",
                 "testnetWalletDeployed": "オリジナルのウォレットコントラクトが配置されました！<br>オリジナルのウォレットコントラクトがアドレス上に配置されました。:<br><br><small><code>__address__</code></small>."
             },
             "addToken": {
@@ -76,19 +76,19 @@
             "defaultName": "無名",
             "creating": "作成中",
             "importing": "インポート中",
-            "accountNote": "アカウントは預入のトランザクションの表示を出来ませんが、etherを送って下さい。預入のトランザクションを見るには <a href=\"/account/new\">ウォレットコントラクトを作って下さい</a> etherを入れるために。",
-            "walletNote": "ほとんどの取引はetherをコントラクトウォレットから受け取ることにまだ対応していません。必ず先にアカウントアドレスにお金を移行して下さい！",
+            "accountNote": "アカウントは預入のトランザクションの表示を出来ませんが、Nekoniumを送って下さい。預入のトランザクションを見るには <a href=\"/account/new\">ウォレットコントラクトを作って下さい</a> Nekoniumを入れるために。",
+            "walletNote": "ほとんどの取引はNekoniumをコントラクトウォレットから受け取ることにまだ対応していません。必ず先にアカウントアドレスにお金を移行して下さい！",
             "addressCopiedToClipboard": "クリップボードにコピーされました",
             "qrCodeLabel": "互換性のあるアプリでQRコードを読み取って下さい",
             "dailyLimit": "１日の制限金額",
             "dailyLimitRemaining": "残高",
             "requiredSignatures": "サインをして下さい",
             "owners": "持ち主",
-            "walletsDescription": "これらの契約はブロックチェーン上に保管され、etherを安全に保管できます。オーナーとしてマルチプルアカウントを保有することができ、全てのトランザクションのログを見ることができます。",
-            "walletsDescriptionNotEnoughFunds": "１ether以上保有しているとより高度な契約ができる様になります。Once you have more than 1 ether you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
-            "accountsDescription": "アカウントはetherを保有できる、パスワードで保護されたキーです、イーサリアムベースのトークンかコインを保全しコントラクトを管理します。アカウントは入ってくる取引を表示できません。",
+            "walletsDescription": "これらの契約はブロックチェーン上に保管され、Nekoniumを安全に保管できます。オーナーとしてマルチプルアカウントを保有することができ、全てのトランザクションのログを見ることができます。",
+            "walletsDescriptionNotEnoughFunds": "１NUKO以上保有しているとより高度な契約ができる様になります。Once you have more than 1 NUKO you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
+            "accountsDescription": "アカウントはNekoniumを保有できる、パスワードで保護されたキーです、イーサリアムベースのトークンかコインを保全しコントラクトを管理します。アカウントは入ってくる取引を表示できません。",
             "buttons": {
-                "deposit": "Etherをデポジット",
+                "deposit": "Nekoniumをデポジット",
                 "depositBitcoin": "Bitcoinを使ってデポジット",
                 "viewOnExplorer": "View on Etherscan",
                 "copyAddress": "アドレスをコピー",
@@ -197,7 +197,7 @@
                     "description": "マルチプルアカウントによって管理されたコントラクト",
                     "text1": "これは接続アカウントです、管理しているのは",
                     "text2": "オーナーです。送信の上限は",
-                    "text3": "ether／１日",
+                    "text3": "NUKO／１日",
                     "text4": "１日の上限を超えるトランザクションは承認が必要です",
                     "text5": "オーナーの",
                     "accountOwnersTitle": "アカウントオーナー",
@@ -250,7 +250,7 @@
             "texts": {
                 "ownerPaysGas": "ガスはウォレットコントラクトのオーナーによって支払われます",
                 "sendAmount": "送りたい <strong>__量__</strong>.",
-                "sendAmountEquivalent": "送りたい<strong>__量__</strong>ether、交換レートは<a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>現在の価値に換算すると<strong>__etherAmount__</strong>.",
+                "sendAmountEquivalent": "送りたい<strong>__量__</strong>NUKO、交換レートは<a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>現在の価値に換算すると<strong>__etherAmount__</strong>.",
                 "sendToken": "送りたい<strong>__量__ __symbol__</strong> の <strong> __名前__</strong>.",
                 "overDailyLimit": "<p class=\"over-daily\">この量は１日の上限を超えています__limit__ (of __total__ per day),  __count__ 了承するための他のアカウント。</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">この量は１日の上限を超えています __limit__ (of __total__ per day), so you need __count__ other accounts to confirm.</p>",

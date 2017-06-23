@@ -30,14 +30,14 @@
                 "blockReceived": "Nouveau bloc reçu",
                 "timeSinceBlock": "depuis le dernier bloc",
                 "peers": "pairs",
-                "testnetExplain": "Vous êtes sur un réseau Testnet, N'ENVOYEZ AUCUN vrai ether à ces adresses",
+                "testnetExplain": "Vous êtes sur un réseau Testnet, N'ENVOYEZ AUCUN vrai Nekonium à ces adresses",
                 "noAccounts": {
                     "title": "Vous n'avez aucun compte pour l'instant",
                     "text": "Vous devez créer au moins un compte avec un mot de passe robuste."
                 }
             },
             "error": {
-                "wrongChain": "Vous semblez être sur une chaine différente, veuillez redémarrer Ethereum Wallet App !"
+                "wrongChain": "Vous semblez être sur une chaine différente, veuillez redémarrer Nekonium Wallet App !"
             },
             "warnings": {
                 "txOriginVulnerabilityWallet": "Ce portefeuille de contrat à puce a le code obsolète et est soumis à des attaques de phishing. ",
@@ -52,7 +52,7 @@
                 "title": "Sélectionner un compte"
             },
             "testnetWallet": {
-                "walletNeedsDeployment": "Vous semblez être sur un réseau Testnet.<br><br>Aucun code de portefeuille n'a été trouvé, nous devons en déployer un qui pourra être utilisé par un 'wallet contract stub contracts' depuis votre adresse : <br><br><small><code>__account__</code></small><br><br><em>Veuillez vous assurer que cette adresse détienne au moins 1 ether en dépôt !</em>",
+                "walletNeedsDeployment": "Vous semblez être sur un réseau Testnet.<br><br>Aucun code de portefeuille n'a été trouvé, nous devons en déployer un qui pourra être utilisé par un 'wallet contract stub contracts' depuis votre adresse : <br><br><small><code>__account__</code></small><br><br><em>Veuillez vous assurer que cette adresse détienne au moins 1 NUKO en dépôt !</em>",
                 "testnetWalletDeployed": "Le portefeuille initial est déployé !<br>Un portefeuille initial a été déployé à cette adresse :<br><br><small><code>__address__</code></small>."
             },
             "addToken": {
@@ -76,19 +76,19 @@
             "defaultName": "Sans nom",
             "creating": "Création",
             "importing": "Importation",
-            "accountNote": "Les comptes ne permettent pas l'affichage des transactions entrantes, mais détiennent et envoient de l'ether. Pour voir les transactions entrantes <a href=\"/account/new\">créez un portefeuille</a> pour stocker de l'ether.",
-            "walletNote": "La plupart des plateformes de change ne permettent pas encore de recevoir de l'ether depuis un portefeuille. Assurez-vous d'abord de transférer vos fonds sur une adresse de compte personnel !",
+            "accountNote": "Les comptes ne permettent pas l'affichage des transactions entrantes, mais détiennent et envoient de l'Nekonium. Pour voir les transactions entrantes <a href=\"/account/new\">créez un portefeuille</a> pour stocker de l'ether.",
+            "walletNote": "La plupart des plateformes de change ne permettent pas encore de recevoir de l'Nekonium depuis un portefeuille. Assurez-vous d'abord de transférer vos fonds sur une adresse de compte personnel !",
             "addressCopiedToClipboard": "Copié dans le presse-papier",
             "qrCodeLabel": "Pointer une app mobile compatible vers ce code",
             "dailyLimit": "Limite quotidienne",
             "dailyLimitRemaining": "restants aujourd'hui",
             "requiredSignatures": "signatures requises",
             "owners": "Propriétaires",
-            "walletsDescription": "Les portefeuilles sont des contrats qui sont stockés sur la blockchain et peuvent détenir et sécuriser de l'ether. Plusieurs comptes peuvent en être propriétaires et ils conservent un registre complet de toutes les transactions.",
-            "walletsDescriptionNotEnoughFunds": "Dès que vous avez plus de 1 ether, vous pouvez créer des contrats plus sophistiqués. Les portefeuilles sont des types de contrats intelligents qui permettent à vos fonds d'être contrôlés par plusieurs comptes et qui ont une option de limite de retrait quotidien permettant d'accroître la sécurité. Pour créer vos propres contrats personnalisés, allez sur l'onglet <em>Contrats </em>.",
-            "accountsDescription": "Les comptes sont des clés protégées par mot de passe qui peuvent détenir de l'ether, sécuriser des jetons basés sur Ethereum, et contrôler des contrats. Les comptes ne peuvent pas afficher les transactions entrantes.",
+            "walletsDescription": "Les portefeuilles sont des contrats qui sont stockés sur la blockchain et peuvent détenir et sécuriser de l'Nekonium. Plusieurs comptes peuvent en être propriétaires et ils conservent un registre complet de toutes les transactions.",
+            "walletsDescriptionNotEnoughFunds": "Dès que vous avez plus de 1 NUKO, vous pouvez créer des contrats plus sophistiqués. Les portefeuilles sont des types de contrats intelligents qui permettent à vos fonds d'être contrôlés par plusieurs comptes et qui ont une option de limite de retrait quotidien permettant d'accroître la sécurité. Pour créer vos propres contrats personnalisés, allez sur l'onglet <em>Contrats </em>.",
+            "accountsDescription": "Les comptes sont des clés protégées par mot de passe qui peuvent détenir de l'Nekonium, sécuriser des jetons basés sur Nekonium, et contrôler des contrats. Les comptes ne peuvent pas afficher les transactions entrantes.",
             "buttons": {
-                "deposit": "Déposer de l'ether",
+                "deposit": "Déposer de l'Nekonium",
                 "depositBitcoin": "Déposer via du Bitcoin",
                 "viewOnExplorer": "View on Etherscan",
                 "copyAddress": "Copier l'adresse",
@@ -197,7 +197,7 @@
                     "description": "Un contrat contrôlé par plusieurs comptes.",
                     "text1": "Ceci est un compte joint contrôlé par",
                     "text2": "propriétaires. Vous pouvez envoyer jusqu'à",
-                    "text3": "ether par jour.",
+                    "text3": "nuko par jour.",
                     "text4": "Toute transaction au delà de cette limite quotidienne nécessite la confirmation de",
                     "text5": "propriétaires.",
                     "accountOwnersTitle": "Propriétaires du compte",
@@ -250,7 +250,7 @@
             "texts": {
                 "ownerPaysGas": "Le gaz est payé par le propriétaire du portefeuille",
                 "sendAmount": "Vous voulez envoyer <strong>__amount__</strong>.",
-                "sendAmountEquivalent": "Vous voulez envoyer <strong>__amount__</strong> en ether, en utilisant le taux de change depuis <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Pour une valeur actuelle de <strong>__etherAmount__</strong>.",
+                "sendAmountEquivalent": "Vous voulez envoyer <strong>__amount__</strong> en NUKO, en utilisant le taux de change depuis <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Pour une valeur actuelle de <strong>__etherAmount__</strong>.",
                 "sendToken": "Vous voulez envoyer <strong>__amount__ __symbol__</strong> de <strong> __name__</strong>.",
                 "overDailyLimit": "<p class=\"over-daily\">Ce montant est supérieur à la limite quotidienne restante __limit__ (de __total__ par jour), vous avez donc besoin de la confirmation de __count__ autres comptes.</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">Ce montant est supérieur à la limite quotidienne restante de __limit__ (de __total__ par jour), vous avez donc besoin de la confirmation de __count__ autres comptes.</p>",
