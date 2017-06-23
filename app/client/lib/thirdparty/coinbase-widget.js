@@ -40,7 +40,7 @@ CoinBaseWidget = function(buttonElem, params) {
             case "buy_completed":
                 self.modal.style.display = "none";
 
-                window.alert("Your purchased Ether will be added to your account (" + e.data.address + ") shortly.")
+                window.alert("Your purchased Nekonium will be added to your account (" + e.data.address + ") shortly.")
 
                 break;
         }
