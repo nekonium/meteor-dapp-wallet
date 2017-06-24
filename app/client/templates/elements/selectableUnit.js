@@ -47,7 +47,7 @@ if (moment().format('MM-DD')=='04-01') {
         { text: 'LOVELACE', value: 'lovelace'},
         { text: 'BABBAGE', value: 'babbage'},
         { text: 'WEI', value: 'wei'},
-        { text: 'NOETHER', value: 'noether'})
+        { text: 'NONUKO', value: 'nonuko'})
 
 // Claude's Birthday
 } else if (moment().format('MM-DD')=='04-30') { 

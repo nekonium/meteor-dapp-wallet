@@ -76,7 +76,7 @@
             "defaultName": "Sans nom",
             "creating": "Création",
             "importing": "Importation",
-            "accountNote": "Les comptes ne permettent pas l'affichage des transactions entrantes, mais détiennent et envoient de l'Nekonium. Pour voir les transactions entrantes <a href=\"/account/new\">créez un portefeuille</a> pour stocker de l'ether.",
+            "accountNote": "Les comptes ne permettent pas l'affichage des transactions entrantes, mais détiennent et envoient de l'Nekonium. Pour voir les transactions entrantes <a href=\"/account/new\">créez un portefeuille</a> pour stocker de l'nuko.",
             "walletNote": "La plupart des plateformes de change ne permettent pas encore de recevoir de l'Nekonium depuis un portefeuille. Assurez-vous d'abord de transférer vos fonds sur une adresse de compte personnel !",
             "addressCopiedToClipboard": "Copié dans le presse-papier",
             "qrCodeLabel": "Pointer une app mobile compatible vers ce code",

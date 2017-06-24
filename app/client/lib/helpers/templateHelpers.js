@@ -192,7 +192,7 @@ Template.registerHelper('formatTime', Helpers.formatTime);
 /**
 Formats a given transactions balance
 
-    {{formatTransactionBalance value exchangeRates "ether"}}
+    {{formatTransactionBalance value exchangeRates "nuko"}}
 
 @method formatTransactionBalance
 @param {String} value  the value to format

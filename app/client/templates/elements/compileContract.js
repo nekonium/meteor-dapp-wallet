@@ -81,7 +81,7 @@ Template['elements_compileContract'].onCreated(function() {
 
         } else {
             // Bytecode Data  
-            if (!selectedToken || selectedToken === 'ether') {
+            if (!selectedToken || selectedToken === 'nuko') {
 
                 // send ether         
                 txData = (TemplateVar.get('show')) ? textareaData : '';

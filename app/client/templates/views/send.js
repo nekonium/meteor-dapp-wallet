@@ -57,7 +57,7 @@ var getDataField = function(){
     // send tokens
     var selectedToken = TemplateVar.get('selectedToken');
 
-    if(selectedToken && selectedToken !== 'ether') {
+    if(selectedToken && selectedToken !== 'nuko') {
         var mainRecipient = TemplateVar.getFrom('div.dapp-address-input input.to', 'value');
         var amount = TemplateVar.get('amount') || '0';
         var token = Tokens.findOne({address: selectedToken});        
@@ -105,12 +105,12 @@ Template['views_send'].onCreated(function(){
     // Deploy contract
     if(FlowRouter.getRouteName() === 'deployContract') {
         TemplateVar.set('selectedAction', 'deploy-contract');
-        TemplateVar.set('selectedToken', 'ether');
+        TemplateVar.set('selectedToken', 'nuko');
 
     // Send funds
     } else {
         TemplateVar.set('selectedAction', 'send-funds');
-        TemplateVar.set('selectedToken', FlowRouter.getParam('token') || 'ether');
+        TemplateVar.set('selectedToken', FlowRouter.getParam('token') || 'nuko');
     }
     
     // check if we are still on the correct chain
@@ -125,7 +125,7 @@ Template['views_send'].onCreated(function(){
         var address = TemplateVar.getFrom('.dapp-select-account.send-from', 'value');
         
         if(!c.firstRun && FlowRouter.getParam('from') !== address) {
-            TemplateVar.set('selectedToken', 'ether');
+            TemplateVar.set('selectedToken', 'nuko');
         }
     });
 
@@ -144,7 +144,7 @@ Template['views_send'].onCreated(function(){
     template.autorun(function(c){
         var unit = EthTools.getUnit();
     
-        if(!c.firstRun && TemplateVar.get('selectedToken') === 'ether') {
+        if(!c.firstRun && TemplateVar.get('selectedToken') === 'nuko') {
             TemplateVar.set('amount', EthTools.toWei(template.find('input[name="amount"]').value.replace(',','.'), unit));
         }
     });
@@ -193,7 +193,7 @@ Template['views_send'].onRendered(function(){
 
 
         // Ether tx estimation
-        if(tokenAddress === 'ether') {
+        if(tokenAddress === 'nuko') {
 
             if(EthAccounts.findOne({address: address}, {reactive: false})) {
                 web3.eth.estimateGas({
@@ -301,7 +301,7 @@ Template['views_send'].helpers({
         // ether
         var gasInWei = TemplateVar.getFrom('.dapp-select-gas-price', 'gasInWei') || '0';
 
-        if (TemplateVar.get('selectedToken') === 'ether') {
+        if (TemplateVar.get('selectedToken') === 'nuko') {
             amount = (selectedAccount && selectedAccount.owners)
                 ? amount
                 : new BigNumber(amount, 10).plus(new BigNumber(gasInWei, 10));
@@ -333,7 +333,7 @@ Template['views_send'].helpers({
         var selectedAccount = Helpers.getAccountByAddress(TemplateVar.getFrom('.dapp-select-account.send-from', 'value'));
         var amount = 0;
 
-        if (TemplateVar.get('selectedToken') === 'ether') {
+        if (TemplateVar.get('selectedToken') === 'nuko') {
             var gasInWei = TemplateVar.getFrom('.dapp-select-gas-price', 'gasInWei') || '0';
 
             // deduct fee if account, for contracts use full amount
@@ -443,7 +443,7 @@ Template['views_send'].events({
     @event click .token-ether
     */
     'click .token-ether': function(e, template){
-        TemplateVar.set('selectedToken', 'ether');
+        TemplateVar.set('selectedToken', 'nuko');
 
         // trigger amount box change
         template.$('input[name="amount"]').trigger('change');
@@ -457,7 +457,7 @@ Template['views_send'].events({
         var value = e.currentTarget.value;
         TemplateVar.set('selectedToken', value);
 
-        if (value === 'ether')    
+        if (value === 'nuko')    
             TemplateVar.setTo('.dapp-data-textarea', 'value', '');    
 
         // trigger amount box change
@@ -470,7 +470,7 @@ Template['views_send'].events({
     */
     'keyup input[name="amount"], change input[name="amount"], input input[name="amount"]': function(e, template){
         // ether
-        if(TemplateVar.get('selectedToken') === 'ether') {
+        if(TemplateVar.get('selectedToken') === 'nuko') {
             var wei = EthTools.toWei(e.currentTarget.value.replace(',','.'));
 
             TemplateVar.set('amount', wei || '0');
@@ -514,7 +514,7 @@ Template['views_send'].events({
                 estimatedGas = 21000;
 
             // if its a wallet contract and tokens, don't need to remove the gas addition on send-all, as the owner pays
-            if(sendAll && (selectedAccount.owners || tokenAddress !== 'ether'))
+            if(sendAll && (selectedAccount.owners || tokenAddress !== 'nuko'))
                 sendAll = false;
 
 
@@ -526,7 +526,7 @@ Template['views_send'].events({
                     duration: 2
                 });
 
-            if(selectedAccount.balance === '0' && (!selectedAccount.owners || tokenAddress === 'ether'))
+            if(selectedAccount.balance === '0' && (!selectedAccount.owners || tokenAddress === 'nuko'))
                 return GlobalNotification.warning({
                     content: 'i18n:wallet.send.error.emptyWallet',
                     duration: 2
@@ -538,7 +538,7 @@ Template['views_send'].events({
                     duration: 2
                 });
 
-            if(tokenAddress === 'ether') {
+            if(tokenAddress === 'nuko') {
                 
                 if((_.isEmpty(amount) || amount === '0' || !_.isFinite(amount)) && !data)
                     return GlobalNotification.warning({
