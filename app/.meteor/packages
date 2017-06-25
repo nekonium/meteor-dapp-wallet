@@ -30,7 +30,7 @@ tap:i18n
 raix:handlebar-helpers
 frozeman:animation-helper
 frozeman:template-var
-frozeman:persistent-minimongo2
+frozeman:persistent-minimongo
 frozeman:reactive-timer
 frozeman:storage
 markdown
