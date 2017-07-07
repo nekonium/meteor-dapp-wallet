@@ -93,7 +93,7 @@
             "buttons": {
                 "deposit": "Nekonium hinterlegen",
                 "depositBitcoin": "Nekonium mit Bitcoin hinterlegen",
-                "viewOnExplorer": "View on Etherscan",
+                "viewOnExplorer": "View on Explorer",
                 "copyAddress": "Adresse kopieren",
                 "scanQRCode": "QR-Code anzeigen",
                 "showInterface": "Interface anzeigen"

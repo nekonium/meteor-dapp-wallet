@@ -90,7 +90,7 @@
             "buttons": {
                 "deposit": "Nekoniumをデポジット",
                 "depositBitcoin": "Bitcoinを使ってデポジット",
-                "viewOnExplorer": "View on Etherscan",
+                "viewOnExplorer": "View on Explorer",
                 "copyAddress": "アドレスをコピー",
                 "scanQRCode": "QRコードを表示",
                 "showInterface": "インターフェイスを表示"

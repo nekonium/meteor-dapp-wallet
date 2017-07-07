@@ -95,7 +95,7 @@
             "buttons": {
                 "deposit": "Depositar Nekonium",
                 "depositBitcoin": "Depositar com Bitcoin",
-                "viewOnExplorer": "Ver no Etherscan",
+                "viewOnExplorer": "Ver no Explorer",
                 "copyAddress": "Copiar endereço",
                 "scanQRCode": "Mostrar código QR",
                 "showInterface": "Mostrar Interface"
