@@ -124,15 +124,14 @@
                                 {{i18n "wallet.accounts.buttons.deposit"}}
                             </a>
                         </li>
-
+                        {{#if $eq ($.Session.get "network") "main"}}
                         <li>
                             <a href="https://nekonium.github.io/proxy/beproxy.html?type=addr&v={{address}}">
                                 <i class="icon-info"></i>
                                 {{i18n "wallet.accounts.buttons.viewOnExplorer"}}
                             </a>
                         </li>                        
-
-                        <li>
+                        {{/if}}                        <li>
                             <button class="copy-to-clipboard-button">
                                 <i class="icon-docs"></i>
                                 {{i18n "wallet.accounts.buttons.copyAddress"}}

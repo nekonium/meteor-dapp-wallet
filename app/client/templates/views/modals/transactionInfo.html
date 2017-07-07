@@ -80,7 +80,7 @@
                         <td>{{i18n "wallet.transactions.block"}}</td>
                         <td>
                            {{#if $eq ($.Session.get "network") "main"}} 
-                            <a href="https://nekonium.github.io/proxy/beproxy.html?type=block&v={{blockHash}}" title="{{blockHash}}" target="_blank" class="dapp-shorten-text">
+                            <a href="https://nekonium.github.io/proxy/beproxy.html?type=block&v={{blockNumber}}" title="{{blockHash}}" target="_blank" class="dapp-shorten-text">
                                 {{blockNumber}}
                                 <br>
                                 {{blockHash.substr 0 40}}...
