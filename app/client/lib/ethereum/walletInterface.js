@@ -39,6 +39,12 @@ web3.eth.getBlock(0, function(e, res){
             case '0x1a505395bfe4b2a8eef2f80033d68228db70e82bb695dd4ffb20e6d0cf71cb73':
                 Session.set('network', 'main');
                 break;
+            case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
+                Session.set('network', 'rinkeby');
+                break;
+            case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
+                Session.set('network', 'ropsten');
+                break;
             default:
                 Session.set('network', 'private');
         }

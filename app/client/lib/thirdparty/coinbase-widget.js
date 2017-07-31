@@ -2,7 +2,7 @@ CoinBaseWidget = function(buttonElem, params) {
     var self = this;
 
     self.domain = "https://buy.coinbase.com";
-    
+
     self.show = function() {
         self.modal.style.display = "block";
     };
@@ -35,7 +35,6 @@ CoinBaseWidget = function(buttonElem, params) {
         switch (e.data.event) {
             case "modal_closed":
                 self.modal.style.display = "none";
-
                 break;
             case "buy_completed":
                 self.modal.style.display = "none";
