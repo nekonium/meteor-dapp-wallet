@@ -19,6 +19,7 @@ when the user actually wants to send the dummy data.
 
 @property defaultEstimateGas
 */
+// FIXME In ethereum version, it changed to 50000000
 var defaultEstimateGas = 5000000;
 
 
@@ -60,7 +61,7 @@ var getDataField = function(){
     if(selectedToken && selectedToken !== 'nuko') {
         var mainRecipient = TemplateVar.getFrom('div.dapp-address-input input.to', 'value');
         var amount = TemplateVar.get('amount') || '0';
-        var token = Tokens.findOne({address: selectedToken});        
+        var token = Tokens.findOne({address: selectedToken});
         var tokenInstance = TokenContract.at(selectedToken);
         var txData = tokenInstance.transfer.getData( mainRecipient, amount,  {});
 
@@ -101,7 +102,7 @@ Template['views_send'].onCreated(function(){
     TemplateVar.set('amount', '0');
     TemplateVar.set('estimatedGas', 300000);
     TemplateVar.set('sendAll', false);
-    
+
     // Deploy contract
     if(FlowRouter.getRouteName() === 'deployContract') {
         TemplateVar.set('selectedAction', 'deploy-contract');
@@ -112,38 +113,29 @@ Template['views_send'].onCreated(function(){
         TemplateVar.set('selectedAction', 'send-funds');
         TemplateVar.set('selectedToken', FlowRouter.getParam('token') || 'nuko');
     }
-    
+
     // check if we are still on the correct chain
     Helpers.checkChain(function(error) {
         if(error && (EthAccounts.find().count() > 0)) {
             checkForOriginalWallet();
         }
     });
-    
-    // change the token type when the account is changed
-    template.autorun(function(c){
-        var address = TemplateVar.getFrom('.dapp-select-account.send-from', 'value');
-        
-        if(!c.firstRun && FlowRouter.getParam('from') !== address) {
-            TemplateVar.set('selectedToken', 'nuko');
-        }
-    });
 
-    
+
     // check daily limit again, when the account was switched
     template.autorun(function(c){
         var address = TemplateVar.getFrom('.dapp-select-account.send-from', 'value'),
             amount = TemplateVar.get('amount') || '0';
-    
+
         if(!c.firstRun) {
             checkOverDailyLimit(address, amount, template);
         }
     });
-    
+
     // change the amount when the currency unit is changed
     template.autorun(function(c){
         var unit = EthTools.getUnit();
-    
+
         if(!c.firstRun && TemplateVar.get('selectedToken') === 'nuko') {
             TemplateVar.set('amount', EthTools.toWei(template.find('input[name="amount"]').value.replace(',','.'), unit));
         }
@@ -159,8 +151,7 @@ Template['views_send'].onRendered(function(){
     // focus address input field
     if(FlowRouter.getParam('address')) {
         this.find('input[name="to"]').value = FlowRouter.getParam('address');
-        this.$('input[name="to"]').trigger('change');
-
+        this.$('input[name="to"]').trigger('input');
     } else if(!this.data){
         this.$('input[name="to"]').focus();
     }
@@ -175,10 +166,29 @@ Template['views_send'].onRendered(function(){
     template.autorun(function(c){
         if(FlowRouter.getRouteName() === 'send') {
             TemplateVar.set('selectedAction', 'send');
-            TemplateVar.setTo('.dapp-data-textarea', 'value', ''); 
+            TemplateVar.setTo('.dapp-data-textarea', 'value', '');
         }
     });
-    
+
+
+    // change the token type when the account is changed
+    var selectedAddress;
+    template.autorun(function(c){
+
+        address = TemplateVar.getFrom('.dapp-select-account.send-from', 'value');
+
+        if (c.firstRun) {
+            selectedAddress = address;
+            return;
+        };
+
+
+        if (selectedAddress !== address) {
+            TemplateVar.set('selectedToken', 'ether');
+        }
+
+        selectedAddress = address;
+    });
 
     // ->> GAS PRICE ESTIMATION
     template.autorun(function(c){
@@ -275,8 +285,8 @@ Template['views_send'].helpers({
         if(!selectedAccount)
             return;
 
-        query['balances.'+ selectedAccount._id] = {$exists: true, $ne: '0'};   
-     
+        query['balances.'+ selectedAccount._id] = {$exists: true, $ne: '0'};
+
         return (TemplateVar.get('selectedAction') === 'send-funds' && !!Tokens.findOne(query, {field: {_id: 1}}));
     },
     /**
@@ -388,8 +398,8 @@ Template['views_send'].helpers({
             amount: Helpers.formatNumberByDecimals(amount, token.decimals),
             name: token.name,
             symbol: token.symbol
-        })); 
-        
+        }));
+
     },
     /**
     Get Balance of a token
@@ -430,7 +440,7 @@ Template['views_send'].helpers({
 Template['views_send'].events({
     /**
     Send all funds
-    
+
     @event change input.send-all
     */
     'change input.send-all': function(e){
@@ -438,8 +448,8 @@ Template['views_send'].events({
         TemplateVar.set('amount', 0);
     },
     /**
-    Select a token 
-    
+    Select a token
+
     @event click .token-ether
     */
     'click .token-ether': function(e, template){
@@ -449,23 +459,23 @@ Template['views_send'].events({
         template.$('input[name="amount"]').trigger('change');
     },
     /**
-    Select a token 
-    
+    Select a token
+
     @event click .select-token
     */
     'click .select-token input': function(e, template){
         var value = e.currentTarget.value;
         TemplateVar.set('selectedToken', value);
 
-        if (value === 'nuko')    
-            TemplateVar.setTo('.dapp-data-textarea', 'value', '');    
+        if (value === 'nuko')
+            TemplateVar.setTo('.dapp-data-textarea', 'value', '');
 
         // trigger amount box change
         template.$('input[name="amount"]').trigger('change');
     },
     /**
     Set the amount while typing
-    
+
     @event keyup input[name="amount"], change input[name="amount"], input input[name="amount"]
     */
     'keyup input[name="amount"], change input[name="amount"], input input[name="amount"]': function(e, template){
@@ -476,10 +486,10 @@ Template['views_send'].events({
             TemplateVar.set('amount', wei || '0');
 
             checkOverDailyLimit(template.find('select[name="dapp-select-account"].send-from').value, wei, template);
-        
+
         // token
         } else {
-            
+
             var token = Tokens.findOne({address: TemplateVar.get('selectedToken')}),
                 amount = e.currentTarget.value || '0';
 
@@ -490,7 +500,7 @@ Template['views_send'].events({
     },
     /**
     Submit the form and send the transaction!
-    
+
     @event submit form
     */
     'submit form': function(e, template){
@@ -505,13 +515,13 @@ Template['views_send'].events({
             data = getDataField(),
             contract = TemplateVar.getFrom('.compile-contract', 'contract'),
             sendAll = TemplateVar.get('sendAll');
-            
-            
+
+
         if(selectedAccount && !TemplateVar.get('sending')) {
 
             // set gas down to 21 000, if its invalid data, to prevent high gas usage.
             if(estimatedGas === defaultEstimateGas || estimatedGas === 0)
-                estimatedGas = 21000;
+                estimatedGas = 21000;   // FIXME This value changed from 21000 to 22000 in ethereum version
 
             // if its a wallet contract and tokens, don't need to remove the gas addition on send-all, as the owner pays
             if(sendAll && (selectedAccount.owners || tokenAddress !== 'nuko'))
@@ -530,8 +540,8 @@ Template['views_send'].events({
                 return GlobalNotification.warning({
                     content: 'i18n:wallet.send.error.emptyWallet',
                     duration: 2
-                });  
-            
+                });
+
             if(!web3.isAddress(to) && !data)
                 return GlobalNotification.warning({
                     content: 'i18n:wallet.send.error.noReceiver',
@@ -539,7 +549,7 @@ Template['views_send'].events({
                 });
 
             if(tokenAddress === 'nuko') {
-                
+
                 if((_.isEmpty(amount) || amount === '0' || !_.isFinite(amount)) && !data)
                     return GlobalNotification.warning({
                         content: 'i18n:wallet.send.error.noAmount',
@@ -554,11 +564,12 @@ Template['views_send'].events({
 
             } else { // Token transfer
 
-                if(!to)
-                return GlobalNotification.warning({
-                    content: 'i18n:wallet.send.error.noReceiver',
-                    duration: 2
-                });
+                if(!to) {
+                    return GlobalNotification.warning({
+                        content: 'i18n:wallet.send.error.noReceiver',
+                        duration: 2
+                    });
+                }
 
                 // Change recipient and amount
                 to = tokenAddress;
@@ -620,10 +631,10 @@ Template['views_send'].events({
                             });
                         }
                     });
-                
+
                 // SIMPLE TX
                 } else {
-                    
+
                     console.log('Gas Price: '+ gasPrice);
                     console.log('Amount:', amount);
 
@@ -662,7 +673,7 @@ Template['views_send'].events({
                                 duration: 8
                             });
                         }
-                    });    
+                    });
                 }
             };
 
@@ -670,7 +681,7 @@ Template['views_send'].events({
             if(typeof mist === 'undefined') {
 
                 console.log('estimatedGas: ' + estimatedGas);
-                
+
                 EthElements.Modal.question({
                     template: 'views_modals_sendTransactionInfo',
                     data: {
@@ -695,5 +706,3 @@ Template['views_send'].events({
         }
     }
 });
-
-

@@ -19,27 +19,38 @@ The available units
 selectableUnits = [{
     text: 'NUKO',
     value: 'nuko'
-},
-/*
-{
-    text: 'FINNEY', //(µΞ)
-    value: 'finney'
-},
-{
-    text: 'BTC',
-    value: 'btc'
-},
-{
-    text: 'USD',
-    value: 'usd'
-},
-{
-    text: 'EUR',
-    value: 'eur'
-}*/
+}
+// FIXME selectable units here !
+
+// ,
+// {
+//     text: 'FINNEY', //(µΞ)
+//     value: 'finney'
+// },
+// {
+//     text: 'BTC',
+//     value: 'btc'
+// },
+// {
+//     text: 'USD',
+//     value: 'usd'
+// },
+// {
+//     text: 'EUR',
+//     value: 'eur'
+// },
+// {
+//     text: 'GBP',
+//     value: 'gbp'
+// },
+// {
+//     text: 'BRL',
+//     value: 'brl'
+// }
 ];
 
 
+// FIXME Aprils fool feature
 // Aprils fool
 if (moment().format('MM-DD')=='04-01') {
     selectableUnits.push({ text: 'SZABO', value: 'szabo'},
@@ -50,13 +61,13 @@ if (moment().format('MM-DD')=='04-01') {
         { text: 'NONUKO', value: 'nonuko'})
 
 // Claude's Birthday
-} else if (moment().format('MM-DD')=='04-30') { 
+} else if (moment().format('MM-DD')=='04-30') {
     selectableUnits.push({ text: 'SHANNON', value: 'shannon'})
 // Ada's Birthday
-} else if (moment().format('MM-DD')=='12-10') { 
+} else if (moment().format('MM-DD')=='12-10') {
     selectableUnits.push({ text: 'LOVELACE', value: 'lovelace'})
 // Charles's Birthday
-} else if (moment().format('MM-DD')=='12-26') { 
+} else if (moment().format('MM-DD')=='12-26') {
     selectableUnits.push({ text: 'BABBAGE', value: 'babbage'})
 }
 
@@ -82,6 +93,14 @@ Template['elements_selectableUnit'].helpers({
     */
     'units': function(){
         return selectableUnits;
+    },
+    /**
+    Can select units
+
+    @method (selectedUnit)
+    */
+    'selectable': function(){
+        return Session.get('network') == 'main';
     }
 });
 

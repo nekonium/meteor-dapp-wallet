@@ -25,15 +25,17 @@ Template['elements_balance'].helpers({
     */
     'convertedBalance': function(){
         var balance = TemplateVar.get('balance');
-        
+
+        // TODO Aprils fool feature
+
         if (EthTools.getUnit() === 'nonuko') return 'infinite';
 
         if(balance){
-            if(EthTools.getUnit() === 'usd' || EthTools.getUnit() === 'eur')
+            if(EthTools.getUnit() === 'usd' || EthTools.getUnit() === 'eur' || EthTools.getUnit() === 'gbp' || EthTools.getUnit() === 'brl')
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00');
             else if(EthTools.getUnit() === 'nuko')
                 return EthTools.formatBalance(TemplateVar.get('balance'), (this.showAllDecimals? '0,0.00[0000000000000000]' : '0,0.00') );
-            else if(EthTools.getUnit() === 'finney')
+            else if(EthTools.getUnit() === 'finney')    // FIXME How about mnuko (milli nuko) or maybe kind of like mike(三毛)
                 return EthTools.formatBalance(TemplateVar.get('balance'), (this.showAllDecimals? '0,0.00[00000000000000]' : '0,0.00'));
             else
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00[000000]');
