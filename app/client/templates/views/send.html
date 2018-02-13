@@ -76,7 +76,7 @@
                 {{#if hasTokens}}
                     <ul class="select-token">
                         <li>
-                            <input type="radio" id="ether" value="ether" name="choose-token" {{tokenSelectedAttr 'ether'}}>
+                            <input type="radio" id="ether" value="ether" name="choose-token" {{tokenSelectedAttr 'nuko'}}>
                             <label for="ether">
                                 <span class="ether-symbol">🐈</span>
                                 <span class="token-name">NUKO</span>
@@ -121,7 +121,7 @@
             <div class="dapp-clear-fix"></div>
         </div>
 
-        {{#if $eq (TemplateVar.get "selectedToken") "ether"}}
+        {{#if $eq (TemplateVar.get "selectedToken") "nuko"}}
             {{> elements_compileContract onlyByteCode=showOnlyByteTextarea codeNotExecutable=(TemplateVar.get "codeNotExecutable")}}
         {{/if}}
 

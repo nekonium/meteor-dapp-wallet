@@ -314,7 +314,7 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
             format += '[000000]';
         else
             format += '[0]';
-        
+
         var price = new BigNumber(String(web3.fromWei(value, 'nuko')), 10).times(exchangeRates[unit].price);
         return EthTools.formatNumber(price, format) + ' '+ unit.toUpperCase();
     } else {
@@ -466,6 +466,11 @@ Returns a string, given an address
 @method getENSName
 **/
 Helpers.getENSName = function(address, callback) {
+
+    // FIXME Nekonium ENS disable patch start
+    callback('There is no official ENS address deployed on main Nekonium chain', null, null);
+    return;
+    // Nekonium ENS disable patch end
 
     if (Session.get('network') !== 'main' ) {
         callback('Cannot retrieve ENS addresses unless fully synced on main chain', null, null);

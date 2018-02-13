@@ -35,7 +35,7 @@ Template['elements_balance'].helpers({
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00');
             else if(EthTools.getUnit() === 'nuko')
                 return EthTools.formatBalance(TemplateVar.get('balance'), (this.showAllDecimals? '0,0.00[0000000000000000]' : '0,0.00') );
-            else if(EthTools.getUnit() === 'finney')    // FIXME How about mnuko (milli nuko) or maybe kind of like mike(三毛)
+            else if(EthTools.getUnit() === 'millinuko')    // FIXME How about mike(三毛)
                 return EthTools.formatBalance(TemplateVar.get('balance'), (this.showAllDecimals? '0,0.00[00000000000000]' : '0,0.00'));
             else
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00[000000]');

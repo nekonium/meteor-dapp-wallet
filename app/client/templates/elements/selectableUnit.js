@@ -20,7 +20,7 @@ selectableUnits = [{
     text: 'NUKO',
     value: 'nuko'
 }
-// FIXME selectable units here !
+// FIXME Nekonium patch : selectable units here !
 
 // ,
 // {

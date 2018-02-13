@@ -184,7 +184,7 @@ Template['views_send'].onRendered(function(){
 
 
         if (selectedAddress !== address) {
-            TemplateVar.set('selectedToken', 'ether');
+            TemplateVar.set('selectedToken', 'nuko');
         }
 
         selectedAddress = address;
