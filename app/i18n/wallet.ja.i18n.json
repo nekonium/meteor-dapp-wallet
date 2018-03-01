@@ -265,7 +265,7 @@
                 "overDailyLimit": "<p class=\"over-daily\">この量は1日の上限を超えています__limit__ (of __total__ per day),  __count__ 了承するための他のアカウント。</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">この量は1日の上限を超えています __limit__ (of __total__ per day), so you need __count__ other accounts to confirm.</p>",
                 "underDailyLimit": "<p class=\"under-daily\">この量は1日の上限以下です __limit__ (of __total__ per day), 即座に送信されます。</p>",
-                "sendFee": "これはこのトランザクションを行う過程でかかる最大の量です。 あなたのトランザクションはマイニングされます。 <strong>__timetext__</strong>.",
+                "sendFee": "これはこのトランザクションを行う過程でかかる最大の手数料です。 あなたのトランザクションは<strong>__timetext__</strong>でマイニングされます。",
                 "noCodeInRecipient": "受領者アカウントはコントラクトではありません、何も実行することはできません。 <strong> コントラクトアドレスを 'TO' に入れてください。 </strong>",
                 "addData": "トランザクションにデータを付与することができます。もし\"to\" の項目を空欄にするとデータを元にコントラクトをデプロイしようとします。",
                 "dataNotExecutable": "実行可能なデータではないようです、このトランザクションで供給されたGASをすべて使い切ってしまうでしょう。",
