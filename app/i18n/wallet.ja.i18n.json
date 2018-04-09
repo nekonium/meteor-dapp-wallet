@@ -93,7 +93,7 @@
             "accountsDescription": "アカウントはNekoniumベースのトークンとNekoniumを保有できる、パスワードで保護された鍵です。コントラクトを管理できますが、アカウントは自分が受け取るトランザクションを表示できません。",
             "buttons": {
                 "deposit": "Nekoniumもくはトークンを引き出す",
-                "depositBitcoin": "Bitcoinを使って引き出し",
+                "buyEther": "Nukoを購入",
                 "viewOnExplorer": "エクスプローラーで表示",
                 "copyAddress": "アドレスをコピー",
                 "scanQRCode": "QRコードを表示",
@@ -134,7 +134,7 @@
             "amount": "量",
             "gasPrice": "ガスの値段",
             "perMillionGas": " PER MILLION GAS",
-            "gasUsed": "ガス使用量", 
+            "gasUsed": "ガス使用量",
             "feePaid": "手数料",
             "data": "データ送信",
             "deployedData": "デプロイされたデータ",

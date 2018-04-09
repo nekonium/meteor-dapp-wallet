@@ -88,8 +88,8 @@
             "walletsDescriptionNotEnoughFunds": "Once you have more than 1 NUKO you can create a more sophisticated contracts. Wallets are one type of basic smart contract, that allows your funds to be controlled by multiple accounts and have an optional daily limit on withdrawals, to increase security.  To create your own custom contracts go to the <em> Contracts </em> tab.",
             "accountsDescription": "Accounts are password protected keys that can hold Nekonium, secure Nekonium-based tokens or coins and control contracts. Accounts can't display incoming transactions.",
             "buttons": {
-                "deposit": "Deposit Nekonium",
-                "depositBitcoin": "Deposit using Bitcoin",
+                "deposit": "Deposit Nuko",
+                "buyEther": "Comprar Nuko",
                 "viewOnExplorer": "View on Explorer",
                 "copyAddress": "Copy address",
                 "scanQRCode": "Show QR-Code",
@@ -127,7 +127,7 @@
             "amount": "Amount",
             "gasPrice": "Gas price",
             "perMillionGas": " PER MILLION GAS",
-            "gasUsed": "Gas used", 
+            "gasUsed": "Gas used",
             "feePaid": "Fee paid",
             "data": "Send data",
             "deployedData": "Deployed data",
@@ -146,7 +146,7 @@
             },
             "error": {
                 "noDataDeployed": "No data is deployed on the contract address!",
-                "outOfGas": "The transaction from __from__ to __to__ couldn't be successfully executed."  
+                "outOfGas": "The transaction from __from__ to __to__ couldn't be successfully executed."
             },
             "types": {
                 "executeContract": "Contract Execution",
@@ -169,7 +169,7 @@
                 },
                 "outgoingTransaction": {
                     "title": "Payment sent",
-                    "text": "You sent __amount__ from __from__ to __to__."    
+                    "text": "You sent __amount__ from __from__ to __to__."
                 },
                 "pendingConfirmation": {
                     "title": "Confirmation needed",
@@ -250,7 +250,7 @@
             "texts": {
                 "ownerPaysGas": "Gas is paid by the owner of the wallet contract",
                 "sendAmount": "You want to send <strong>__amount__</strong>.",
-                "sendAmountEquivalent": "You want to send <strong>__amount__</strong> in NUKO, using exchange rates from <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Which is currently an equivalent of <strong>__etherAmount__</strong>.",
+                "sendAmountEquivalent": "You want to send <strong>__amount__</strong> in Nuko, using exchange rates from <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Which is currently an equivalent of <strong>__etherAmount__</strong>.",
                 "sendToken": "You want to send <strong>__amount__ __symbol__</strong> of <strong> __name__</strong>.",
                 "overDailyLimit": "<p class=\"over-daily\">This amount is over the remaining daily limit of __limit__ (of __total__ per day), so you need __count__ other account to confirm.</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">This amount is over the remaining daily limit of __limit__ (of __total__ per day), so you need __count__ other accounts to confirm.</p>",

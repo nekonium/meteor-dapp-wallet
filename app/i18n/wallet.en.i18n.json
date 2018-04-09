@@ -31,7 +31,7 @@
                 "timeSinceBlock": "since last block",
                 "peers": "peers",
                 "waitingForBlocks": "Waiting for blocks..",
-                "testnetExplain": "You are on a testnet, DO NOT SEND any real Nekonium to these addresses",
+                "testnetExplain": "You are on a testnet, DO NOT SEND any real Nuko to these addresses",
                 "noAccounts": {
                     "title": "You have no accounts yet",
                     "text": "You need to create at least one account with a strong password."
@@ -79,9 +79,9 @@
             "defaultName": "Unnamed",
             "creating": "Creating",
             "importing": "Importing",
-            "accountNote": "Accounts can't display incoming transactions, but can receive, hold and send Nekonium. To see incoming transactions <a href=\"/account/new\">create a wallet contract</a> to store nekonium.",
+            "accountNote": "Accounts can't display incoming transactions, but can receive, hold and send Nuko. To see incoming transactions <a href=\"/account/new\">create a wallet contract</a> to store nekonium.",
             "outOfSyncNote": "If your balance doesn't seem updated, make sure that you are in sync with the network.",
-            "walletNote": "Most exchanges don't support receiving Nekonium from a contract wallet yet. Be sure to move your balance to an account address first!",
+            "walletNote": "Most exchanges don't support receiving nuko from a contract wallet yet. Be sure to move your balance to an account address first!",
             "addressCopiedToClipboard": "Copied to clipboard",
             "addressNotCopiedToClipboard": "Error copying address to clipboard. Please try again.",
             "qrCodeLabel": "Point a compatible mobile app to this code",
@@ -89,13 +89,12 @@
             "dailyLimitRemaining": "remaining today",
             "requiredSignatures": "Required signatures",
             "owners": "Owners",
-            "walletsDescription": "These contracts are stored on the blockchain and can hold and secure Nekonium. They can have multiple accounts as owners and keep a full log of all transactions.",
+            "walletsDescription": "These contracts are stored on the blockchain and can hold and secure Nuko. They can have multiple accounts as owners and keep a full log of all transactions.",
             "walletsDescriptionNotEnoughFunds": "Once you have more than 1 NUKO you can create more sophisticated contracts. Wallets are smart contracts that allow your funds to be controlled by multiple accounts.  They can have an optional daily limit on withdrawals to increase security.  Create your own custom contracts on the <em>Contracts</em> tab.",
-            "accountsDescription": "Accounts are password protected keys that can hold Nekonium and Nekonium-based tokens.  They can control contracts, but can't display incoming transactions.",
+            "accountsDescription": "Accounts are password protected keys that can hold Nuko and Nekonium-based tokens.  They can control contracts, but can't display incoming transactions.",
             "buttons": {
                 "deposit": "Transfer Nekonium & Tokens",
-                "depositBitcoin": "Fund with Bitcoin",
-                "depositUsingCreditCard": "Fund with a Credit Card (U.S. only)",
+                "buyEther": "Buy nuko",
                 "viewOnExplorer": "View on Explorer",
                 "copyAddress": "Copy address",
                 "scanQRCode": "Show QR-Code",
@@ -136,7 +135,7 @@
             "amount": "Amount",
             "gasPrice": "Gas price",
             "perMillionGas": " PER MILLION GAS",
-            "gasUsed": "Gas used", 
+            "gasUsed": "Gas used",
             "feePaid": "Fee paid",
             "data": "Send data",
             "deployedData": "Deployed data",
@@ -155,7 +154,7 @@
             },
             "error": {
                 "noDataDeployed": "No data is deployed on the contract address!",
-                "outOfGas": "The transaction from __from__ to __to__ couldn't be successfully executed."  
+                "outOfGas": "The transaction from __from__ to __to__ couldn't be successfully executed."
             },
             "types": {
                 "executeContract": "Contract execution",
@@ -178,7 +177,7 @@
                 },
                 "outgoingTransaction": {
                     "title": "Payment sent",
-                    "text": "You sent __amount__ from __from__ to __to__."    
+                    "text": "You sent __amount__ from __from__ to __to__."
                 },
                 "pendingConfirmation": {
                     "title": "Confirmation needed",
@@ -206,7 +205,7 @@
                     "description": "A contract controlled by multiple accounts",
                     "text1": "This is a joint account controlled by",
                     "text2": "owners. You can send up to",
-                    "text3": "Nuko per day.",
+                    "text3": "Ether per day.",
                     "text4": "Any transaction over that daily limit requires the confirmation of",
                     "text5": "owners.",
                     "accountOwnersTitle": "Account owners",
@@ -222,7 +221,7 @@
                 }
             },
             "error": {
-                "emptySignees": "You didn't provided all owners.",
+                "emptySignees": "You didn't provide all owners.",
                 "alreadyExists": "Wallet contract already exists.",
                 "stubHasNoOrigWalletAddress": "Your stub contract has no original account address set.  Please restart your App!",
                 "contractsCantBeOwners": "Contracts can't be owners.",
@@ -257,12 +256,13 @@
                 "emptyWallet": "The account you want to send from is empty.",
                 "notEnoughFunds": "You don't have enough funds in the account.",
                 "noReceiver": "You didn't specify a receiver.",
-                "noAmount": "You didn't specify an amount to send."
+                "noAmount": "You didn't specify an amount to send.",
+                "rejectedInMetamask": "You have rejected the transaction in MetaMask."
             },
             "texts": {
                 "ownerPaysGas": "Gas is paid by the owner of the wallet contract",
                 "sendAmount": "You want to send <strong>__amount__</strong>.",
-                "sendAmountEquivalent": "You want to send <strong>__amount__</strong> in NUKO, using exchange rates from <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Which is currently an equivalent of <strong>__etherAmount__</strong>.",
+                "sendAmountEquivalent": "You want to send <strong>__amount__</strong> in Ether, using exchange rates from <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">cryptocompare.com</a>.<br>Which is currently an equivalent of <strong>__etherAmount__</strong>.",
                 "sendToken": "You want to send <strong>__amount__ __symbol__</strong> of <strong> __name__</strong>.",
                 "overDailyLimit": "<p class=\"over-daily\">This amount is over the remaining daily limit of __limit__ (of __total__ per day), so you need __count__ other account to confirm.</p>",
                 "overDailyLimit_plural": "<p class=\"over-daily\">This amount is over the remaining daily limit of __limit__ (of __total__ per day), so you need __count__ other accounts to confirm.</p>",
@@ -270,7 +270,7 @@
                 "sendFee": "This is the most amount of money that might be used to process this transaction. Your transaction will be mined <strong>__timetext__</strong>.",
                 "noCodeInRecipient": "The recipient account is not a contract, so you can't execute anything. <strong> Put a contract address on the 'TO' field. </strong>",
                 "addData": "You can add extra data to send along with your transaction. If you don't know what this is then <strong>don't touch it or bad things may happen</strong>.",
-                "dataNotExecutable": "The data seems not to be executabe, that means this transaction will use all the gas you provide.",
+                "dataNotExecutable": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
                 "cantEstimateGas": "We can't estimate your gas usage properly, as you need at least 1 Ether in your account.",
                 "estimatedGas": "Estimated required gas",
                 "timeTexts": {
