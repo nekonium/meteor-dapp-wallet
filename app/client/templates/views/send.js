@@ -521,7 +521,7 @@ Template['views_send'].events({
 
             // set gas down to 21 000, if its invalid data, to prevent high gas usage.
             if(estimatedGas === defaultEstimateGas || estimatedGas === 0)
-                estimatedGas = 21000;   // FIXME This value changed from 21000 to 22000 in ethereum version
+                estimatedGas = 22000;   // FIXME This value changed from 21000 to 22000 in ethereum version
 
             // if its a wallet contract and tokens, don't need to remove the gas addition on send-all, as the owner pays
             if(sendAll && (selectedAccount.owners || tokenAddress !== 'nuko'))
