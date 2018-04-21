@@ -2,7 +2,7 @@
 
 The Nekonium wallet.
 
-[![Build Status](https://travis-ci.org/ethereum/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/ethereum/meteor-dapp-wallet)
+[![Build Status](https://travis-ci.org/nekonium/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/nekonium/meteor-dapp-wallet)
 
 **NOTE** The wallet is not yet official released,
 can contain severe bugs!
@@ -10,7 +10,7 @@ can contain severe bugs!
 
 ## Development
 
-Start an `gnekonium` node and and the app using meteor and open http://localhost:3000 in your browser:
+Start an `gnekonium` node and the app using meteor and open http://localhost:3000 in your browser:
 
     $ gnekonium --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
 

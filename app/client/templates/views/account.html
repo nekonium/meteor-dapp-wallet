@@ -12,13 +12,13 @@
                 {{else}}
                     {{> dapp_identicon identity=address}}
                     <h1 class="{{ensClass}}">
-                        <span>{{displayName}}</span> 
+                        <span>{{displayName}}</span>
 
                         {{#if $or owners jsonInterface}}
                             <button class="dapp-icon-button delete icon-trash"></button>
                         {{/if}}
                     </h1>
-                    {{> elements_balance balance=balance changeUnit=true showAllDecimals=true}}                
+                    {{> elements_balance balance=balance changeUnit=true showAllDecimals=true}}
                 {{/with}}
             </div>
 
@@ -27,11 +27,11 @@
                 <header class="{{ensClass}}">
                     <h1>
                         {{#if ens}}
-                        <span>{{displayName}}</span> 
+                        <span>{{displayName}}</span>
                         {{else}}
-                        <em class="edit-name">{{displayName}}</em> 
+                        <em class="edit-name">{{displayName}}</em>
                         <i class="edit-icon icon-pencil"></i>
-                        {{/if}}                        
+                        {{/if}}
                     </h1>
                     <h2 class="copyable-address">{{walletIcon}}
                         <!-- <input type="text" value="{{toChecksumAddress address}}" readonly class=""> -->
@@ -126,19 +126,32 @@
                                 {{i18n "wallet.accounts.buttons.deposit"}}
                             </a>
                         </li>
+
                         {{#if $eq ($.Session.get "network") "main"}}
+
+                          {{#if ownedAccount}}
+                          <li>
+                              <a href="https://changelly.com/widget/v1?auth=email&from=USD&to=ETH&merchant_id=47f87f7cddda&address={{address}}&amount=1&ref_id=e25c5a2e8719&color=02a8f3" target="_blank">
+                                  <i class="icon-ethereum"></i>
+                                  {{i18n "wallet.accounts.buttons.buyEther"}}
+                              </a>
+                          </li>
+                          {{/if}}
+
                         <li>
-                            <a href="https://nekonium.github.io/proxy/beproxy.html?type=addr&v={{address}}">
+                            <a href="https://nekonium.github.io/proxy/beproxy.html?type=addr&v={{address}}" target="_blank">
                                 <i class="icon-info"></i>
                                 {{i18n "wallet.accounts.buttons.viewOnExplorer"}}
                             </a>
-                        </li>                        
-                        {{/if}}                        <li>
+                        </li>
+                        {{/if}}
+
+                        <li>
                             <button class="copy-to-clipboard-button">
                                 <i class="icon-docs"></i>
                                 {{i18n "wallet.accounts.buttons.copyAddress"}}
                             </button>
-                        </li>                        
+                        </li>
                         <li>
                             <button class="qrcode-button">
                                 <i class="icon-camera"></i>
@@ -152,7 +165,7 @@
                                     {{i18n "wallet.accounts.buttons.showInterface"}}
                                 </button>
                             </li>
-                        {{/if}}                    
+                        {{/if}}
 
                     </ul>
                 </nav>
@@ -181,7 +194,7 @@
                 {{#with customContract}}
                     <h2>{{i18n 'wallet.events.latest'}}</h2>
                     <br>
-                    
+
                     <div>
                         <input type="checkbox" id="watch-events-checkbox" class="toggle-watch-events" checked="{{TemplateVar.get 'watchEvents'}}">
                         <label for="watch-events-checkbox">{{i18n "wallet.contracts.buttons.watchContractEvents"}}</label>
@@ -192,7 +205,7 @@
                             {{> spinner}}
                         </div>
                     {{/if}}
-            
+
                     {{> elements_event_table ids=contractEvents}}
                 {{/with}}
             </div>
