@@ -1,3 +1,5 @@
+var BigNumber=nekonium.BigNumber;
+
 /**
 The template show the token in the .wallet-box
 

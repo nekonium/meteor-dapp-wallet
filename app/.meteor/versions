@@ -77,11 +77,11 @@ mongo@1.4.7
 mongo-dev-server@1.1.0
 mongo-id@1.0.7
 mrt:qrcodesvg@0.1.0
-nekonium:accounts@0.4.0
-nekonium:blocks@0.3.2
-nekonium:elements@0.7.12
-nekonium:tools@0.7.0
-nekonium:web3@0.20.2
+nekonium:accounts@0.4.1
+nekonium:blocks@0.3.3
+nekonium:elements@0.7.22
+nekonium:tools@0.7.3
+nekonium:web3@0.20.604
 npm-mongo@2.2.34
 numeral:languages@1.5.3
 numeral:numeral@1.5.3_1

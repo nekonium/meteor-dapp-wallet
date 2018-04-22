@@ -1,3 +1,5 @@
+var web3=nekonium.web3;
+var BigNumber=nekonium.BigNumber;
 /**
 Template Controllers
 

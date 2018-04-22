@@ -33,6 +33,7 @@ Meteor.Spinner.options = {
     left: '50%' // Left position relative to parent
 };
 
+var web3=nekonium.web3;
 
 
 // Stop app operation, when the node is syncing

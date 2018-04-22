@@ -39,10 +39,10 @@ mrt:qrcodesvg
 sacha:spin
 frozeman:global-notifications
 agnito:simptip
-nekonium:elements
-nekonium:web3
-nekonium:blocks
-nekonium:accounts
+nekonium:elements@0.7.18
+nekonium:web3@0.20.604
+nekonium:blocks@0.3.3
+nekonium:accounts@0.4.1
 ethereum:dapp-styles
 jrudio:bluebird
 tap:i18n-bundler

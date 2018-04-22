@@ -1,3 +1,4 @@
+var web3=nekonium.web3;
 /**
 All potential vulnerable wallets
 

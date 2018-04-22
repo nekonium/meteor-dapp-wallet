@@ -1,3 +1,5 @@
+var BigNumber=nekonium.BigNumber;
+
 /**
 Template Controllers
 

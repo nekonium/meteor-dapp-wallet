@@ -1,4 +1,6 @@
 // var addLogWatching = function(newDocument){
+// var web3=nekonium.web3;
+// var BigNumber=nekonium.BigNumber;
 
 
 //     var contractInstance = web3.eth.contract(newDocument.jsonInterface).at(newDocument.address);

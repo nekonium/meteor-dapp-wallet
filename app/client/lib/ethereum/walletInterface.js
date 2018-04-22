@@ -1,3 +1,6 @@
+var web3=nekonium.web3;
+var BigNumber=nekonium.BigNumber;
+
 Session.setDefault('network', false);
 
 // MAIN-NET CONTRACT ADDRESS

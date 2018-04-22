@@ -1,6 +1,6 @@
 
 var tokenContracts = {};
-
+var web3=nekonium.web3;
 
 /**
 Creates filters for a wallet contract, to watch for deposits, pending confirmations, or contract creation events.

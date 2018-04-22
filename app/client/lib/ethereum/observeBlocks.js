@@ -1,5 +1,5 @@
 var peerCountIntervalId = null;
-
+var web3=nekonium.web3;
 /**
 Update the peercount
 

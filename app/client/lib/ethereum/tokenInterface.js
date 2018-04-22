@@ -1,5 +1,5 @@
 //"0x11485c5f164d6a67a72eee9093b2581d1c304094"
-
+var web3=nekonium.web3;
 // Token Interface
 
 var tokenInterface = [
