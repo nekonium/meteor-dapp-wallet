@@ -96,7 +96,7 @@ var deployTestnetWallet = function() {
                     if(contract.address) {
                         console.log('Contract created at: ', contract.address);
 
-                        LocalStore.set('ethereum_testnetWalletContractAddress', contract.address);
+                        LocalStore.set('nekonium_testnetWalletContractAddress', contract.address);
                         replaceStubAddress(contract.address);
 
                         EthElements.Modal.question({
@@ -176,7 +176,7 @@ checkForOriginalWallet = function() {
         // see if the original wallet is deployed, if not re-deploy on testnet
         checkCodeOnAddress(mainNetAddress, function() {
             checkCodeOnAddress(testNetAddress, function() {
-                var privateNetAddress = LocalStore.get('ethereum_testnetWalletContractAddress');
+                var privateNetAddress = LocalStore.get('nekonium_testnetWalletContractAddress');
 
                 if(privateNetAddress)
                     web3.eth.getCode(privateNetAddress, function(e, code) {
