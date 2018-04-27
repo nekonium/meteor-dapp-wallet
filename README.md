@@ -1,8 +1,23 @@
 # Nekonium Wallet Ðapp
-
-The Nekonium wallet.
-
 [![Build Status](https://travis-ci.org/nekonium/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/nekonium/meteor-dapp-wallet)
+
+Ethereum WalletからフォークしたNekonium Walletです。
+
+## Differences from Ethereum Wallet
+
+- Update web3 library to nekonium web3.
+- Removed links for Ethreum exchanges/exprolers.
+- Changed default unit to nuko.
+- Changed the namespace of web3 to nekonium/web3.
+- Removed some localize files.
+
+
+
+# Ethereum Wallet Ðapp
+
+The Ethereum wallet.
+
+[![Build Status](https://travis-ci.org/ethereum/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/nekonium/meteor-dapp-wallet)
 
 **NOTE** The wallet is not yet official released,
 can contain severe bugs!
@@ -10,9 +25,9 @@ can contain severe bugs!
 
 ## Development
 
-Start an `gnekonium` node and the app using meteor and open http://localhost:3000 in your browser:
+Start an `geth` node and the app using meteor and open http://localhost:3000 in your browser:
 
-    $ gnekonium --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
+    $ geth --rpccorsdomain "http://localhost:3000" --rpc --unlock <your account>
 
 Starting the wallet dapp using [Meteor](https://meteor.com/install)
 
